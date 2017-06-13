@@ -2,7 +2,7 @@
 
 This is a collection of dotfiles and scripts I use.  
 
-![Terminal.app](https://raw.github.com/nicksp/dotfiles/master/iterm/nick-terminal.png)
+![Terminal.app](https://gitlab.com/jcbmln/dotfiles/raw/master/jacob-terminal.png)
 
 The install script will check for existing dotfiles with the same name is the dotfiles in this repository and back them up to `~/dotfiles.old/`.
 
@@ -47,8 +47,8 @@ as the `git` user credentials, e.g.:
 
 ```sh
 [user]
-  name = Nick Plekhanov
-  email = nick@example.com
+  name = Jacob Malone
+  email = jacob@example.com
 ```
 
 ## Resources
