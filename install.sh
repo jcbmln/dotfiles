@@ -15,7 +15,7 @@ DOTFILES="${HOME}/.dotfiles"
 get_zsh() {
     echo "${YELLOW}Installing zsh...\n${NORMAL}"
 
-    if [ ! $(grep /zsh$ /etc/shells | wc -l) -ge 1 ]; then
+    if [ ! "$(grep /zsh$ /etc/shells | wc -l)" -ge 1 ]; then
         sudo apt -y install zsh
         echo "${GREEN}Installation complete.\n"
     else
