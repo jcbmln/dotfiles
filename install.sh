@@ -10,10 +10,10 @@ YELLOW="$(tput setaf 3)"
 BLUE="$(tput setaf 4)"
 NORMAL="$(tput sgr0)"
 
-DOTFILES="~/.dotfiles"
+DOTFILES="${HOME}/.dotfiles"
 
 get_zsh() {
-    echo "${YELLOW}Installing zsh...\n"
+    echo "${YELLOW}Installing zsh...\n${NORMAL}"
 
     if [ ! $(grep /zsh$ /etc/shells | wc -l) -ge 1 ]; then
         sudo apt -y install zsh
@@ -22,9 +22,9 @@ get_zsh() {
         echo "${BLUE}Zsh is already installed.\n"
     fi
 
-    echo "${YELLOW}Changing default shell...\n"
+    echo "${YELLOW}Changing default shell...\n${NORMAL}"
 
-    if [[ ! $(echo $SHELL) == $(grep /zsh$ /etc/shells | tail -1) ]]; then
+    if [ $(echo $SHELL) != $(grep /zsh$ /etc/shells | tail -1) ]; then
         chsh -s $(grep /zsh$ /etc/shells | tail -1)
         echo "${GREEN}Default shell changed.\n"
     else
@@ -33,7 +33,7 @@ get_zsh() {
 }
 
 get_git() {
-    echo "${YELLOW}Installing git...\n"
+    echo "${YELLOW}Installing git...\n${NORMAL}"
 
     if [ ! $(git --version 2>&1 >/dev/null) -eq 0 ]; then
         sudo apt -y install git
@@ -55,7 +55,7 @@ clone_dotfiles() {
 move_files() {
     echo "${YELLOW}Moving files...\n"
 
-    mv ${DOTFILES}/rc/* $HOME/
+    mv ${DOTFILES}/rc/.* $HOME/
     mv ${DOTFILES}/zsh $HOME/
     mv ${DOTFILES}/bin $HOME/
 
