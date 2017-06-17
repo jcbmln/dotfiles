@@ -1,6 +1,6 @@
 autoload -U colors && colors
 
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
+export LS_COLORS="Gxfxcxdxbxegedabagacad"
 
 setopt auto_cd
 setopt auto_pushd
@@ -13,6 +13,9 @@ RED="$(tput setaf 1)"
 GREEN="$(tput setaf 2)"
 YELLOW="$(tput setaf 3)"
 BLUE="$(tput setaf 4)"
+VIOLET="$(tput setaf 5)"
+CYAN="$(tput setaf 6)"
+WHITE="$(tput setaf 7)"
 NORMAL="$(tput sgr0)"
 
 # Git info
@@ -23,8 +26,8 @@ GIT_PROMPT_SUFFIX="${NORMAL}"
 GIT_PROMPT_DIRTY="${RED}✖${NORMAL}"
 GIT_PROMPT_CLEAN="${GREEN}✓${NORMAL}"
 
-local exit_code="%(?,,C:${RED}?${NORMAL})"
+local exit_code="%(?,,C:${RED}%?${NORMAL})"
 
 PROMPT="
-${YELLOW}%n${NORMAL}@${BLUE}%m ${GREEN}%~${NORMAL}${git_info} $exit_code
+${YELLOW}%n${NORMAL}@${BLUE}%m ${GREEN}%~${YELLOW}${git_info} $exit_code
 ${RED}> ${NORMAL}"

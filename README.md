@@ -22,33 +22,6 @@ or, using wget:
 sh -c "`wget -O - --no-check-certificate https://gitlab.com/jcbmln/dotfiles/raw/master/install.sh`"
 ```
 
-## Local Settings
-
-The dotfiles can be easily extended to suit additional local
-requirements by using the following files:
-
-### `~/.zsh.local`
-
-If the `~/.zsh.local` file exists, it will be automatically sourced
-after all the other [shell related files](shell), thus, allowing its
-content to add to or overwrite the existing aliases, settings, PATH,
-etc.
-
-### `~/.gitconfig.local`
-
-If the `~/.gitconfig.local` file exists, it will be automatically
-included after the configurations from [`~/.gitconfig`](git/gitconfig), thus, allowing
-its content to overwrite or add to the existing `git` configurations.
-
-**Note:** Use `~/.gitconfig.local` to store sensitive information such
-as the `git` user credentials, e.g.:
-
-```sh
-[user]
-  name = Jacob Malone
-  email = jacob@example.com
-```
-
 ## Resources
 
 I used this page for help getting started with my dotfiles:

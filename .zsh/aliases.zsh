@@ -26,6 +26,9 @@ alias mkdir='mkdir -p'
 alias lsa='ls -A'
 alias lls='ls -lAh'
 
+(( $+commands[dircolors] )) && eval "$(dircolors -b)"
+ls --color -d . &>/dev/null && alias ls='ls --color=tty' || { ls -G . &>/dev/null && alias ls='ls -G' }
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
