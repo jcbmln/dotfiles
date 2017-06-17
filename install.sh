@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # https://gitlab.com/jcbmln/dotfiles/raw/master/install.sh
 
