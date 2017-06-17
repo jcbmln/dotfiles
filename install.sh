@@ -68,7 +68,7 @@ move_files() {
 cleanup() {
     echo "${YELLOW}Cleaning up...\n"
 
-    rmdir ${DOTFILES}
+    rm -rf ${DOTFILES}
 }
 
 get_zsh
