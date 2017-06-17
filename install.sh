@@ -37,7 +37,7 @@ get_git() {
 
     git --version 2>&1 >/dev/null
 
-    if [ $? -gt 0 ]; then
+    if [ "$?" -gt 0 ]; then
         sudo apt -y install git
         echo "${GREEN}Installation complete.\n"
     else
@@ -69,6 +69,8 @@ cleanup() {
     echo "${YELLOW}Cleaning up...\n"
 
     rm -rf ${DOTFILES}
+
+    echo "${GREEN}Done!\n${NORMAL}"
 }
 
 get_zsh
