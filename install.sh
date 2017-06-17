@@ -58,13 +58,20 @@ move_files() {
     echo "${YELLOW}Moving files...\n"
 
     mv ${DOTFILES}/rc/.* $HOME/
-    mv ${DOTFILES}/zsh $HOME/
+    mv ${DOTFILES}/.zsh $HOME/
     mv ${DOTFILES}/bin $HOME/
 
     echo "${GREEN}Done!"
+}
+
+cleanup() {
+    echo "${YELLOW}Cleaning up...\n"
+
+    rmdir ${DOTFILES}
 }
 
 get_zsh
 get_git
 clone_dotfiles
 move_files
+cleanup
