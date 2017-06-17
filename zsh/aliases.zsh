@@ -14,6 +14,13 @@ alias debin='sudo dpkg -i ./*.deb'
 
 alias aptsrc='sudo nano /etc/apt/sources.list'
 
+# systemd
+user_commands=(is-active status is-enabled)
+sudo_commands=(start stop reload restart enable disable)
+
+for c in $user_commands; do; alias sc-$c="systemctl $c"; done
+for c in $sudo_commands; do; alias sc-$c="sudo systemctl $c"; done
+
 # directory aliases
 alias mkdir='mkdir -p'
 alias lsa='ls -A'
@@ -24,7 +31,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias untar='tar -xvf'
+alias grep='grep --color auto'
+alias history='fc -il 1'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

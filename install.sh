@@ -44,7 +44,7 @@ get_git() {
 }
 
 clone_dotfiles() {
-    echo "${YELLOW}Cloning dotfiles into ${DOTFILES}\n"
+    echo "${YELLOW}Cloning dotfiles into ${DOTFILES}...\n"
 
     env git clone --depth=1 https://jcbmln@gitlab.com/jcbmln/dotfiles.git $DOTFILES || {
         echo "${RED}Error: git clone failed\n"
@@ -52,6 +52,17 @@ clone_dotfiles() {
     }
 }
 
+move_files() {
+    echo "${YELLOW}Moving files...\n"
+
+    mv ${DOTFILES}/rc/* $HOME/
+    mv ${DOTFILES}/zsh $HOME/
+    mv ${DOTFILES}/bin $HOME/
+
+    echo "${GREEN}Done!"
+}
+
 get_zsh
 get_git
 clone_dotfiles
+move_files

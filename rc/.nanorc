@@ -1,0 +1,15 @@
+set autoindent
+set casesensitive
+set const
+set morespace
+set smarthome
+set tabsize 4
+set tabstospaces
+
+set titlecolor brightwhite,blue
+set numbercolor brightgreen
+set statuscolor brightwhite,blue
+set keycolor blue
+set functioncolor green
+
+bind ^S save
