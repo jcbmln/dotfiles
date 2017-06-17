@@ -57,8 +57,9 @@ clone_dotfiles() {
 move_files() {
     echo "${YELLOW}Moving files...\n"
 
-    mv ${DOTFILES}/rc/.* $HOME/
+    mv ${DOTFILES}/rc/.*rc $HOME/
     mv ${DOTFILES}/.zsh $HOME/
+    mv ${DOTFILES}/.nano $HOME/
     mv ${DOTFILES}/bin $HOME/
 
     echo "${GREEN}Done!"
