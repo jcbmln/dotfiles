@@ -11,4 +11,4 @@ set statuscolor brightwhite,blue
 set keycolor blue
 set functioncolor green
 
-bind ^S save
+bind ^S savefile main
