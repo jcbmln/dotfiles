@@ -45,13 +45,18 @@ get_git() {
     fi
 }
 
+get_neofetch() {
+    echo "${YELLOW}Installing neofetch...\n${NORMAL}"
+
+    sudo add-apt-repository ppa:dawidd0811/neofetch
+    sudo apt update
+    sudo apt install neofetch
+}
+
 clone_dotfiles() {
     echo "${YELLOW}Cloning dotfiles into ${DOTFILES}...\n"
 
-    env git clone --depth=1 https://jcbmln@gitlab.com/jcbmln/dotfiles.git $DOTFILES || {
-        echo "${RED}Error: git clone failed\n"
-        exit 1
-    }
+    git clone --depth=1 https://jcbmln@gitlab.com/jcbmln/dotfiles.git $DOTFILES
 }
 
 move_files() {
@@ -75,6 +80,7 @@ cleanup() {
 
 get_zsh
 get_git
+get_neofetch
 clone_dotfiles
 move_files
 cleanup
