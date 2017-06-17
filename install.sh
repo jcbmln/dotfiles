@@ -48,9 +48,16 @@ get_git() {
 get_neofetch() {
     echo "${YELLOW}Installing neofetch...\n${NORMAL}"
 
-    sudo add-apt-repository ppa:dawidd0811/neofetch
-    sudo apt update
-    sudo apt install neofetch
+    neofetch --version 2>&1 >/dev/null
+
+    if [ "$?" -gt 0 ]; then
+        sudo add-apt-repository ppa:dawidd0811/neofetch
+        sudo apt update
+        sudo apt install neofetch
+
+        echo "${GREEN}Installation complete.\n"
+    else
+        echo "${BLUE}Neofetch is already installed.\n"
 }
 
 clone_dotfiles() {
