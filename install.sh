@@ -37,7 +37,7 @@ get_git() {
 
     git --version 2>&1 >/dev/null
 
-    if [ "$?" -gt 0 ]; then
+    if [ "$?" -eq 127 ]; then
         sudo apt -y install git
         echo "${GREEN}Installation complete.\n"
     else
@@ -50,7 +50,7 @@ get_neofetch() {
 
     neofetch --version 2>&1 >/dev/null
 
-    if [ "$?" -gt 0 ]; then
+    if [ "$?" -eq 127 ]; then
         sudo add-apt-repository ppa:dawidd0811/neofetch
         sudo apt update
         sudo apt install neofetch
