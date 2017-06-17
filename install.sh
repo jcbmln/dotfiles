@@ -35,7 +35,9 @@ get_zsh() {
 get_git() {
     echo "${YELLOW}Installing git...\n${NORMAL}"
 
-    if [ ! $(git --version 2>&1 >/dev/null) -eq 0 ]; then
+    git --version 2>&1 >/dev/null
+
+    if [ $? -gt 0 ]; then
         sudo apt -y install git
         echo "${GREEN}Installation complete.\n"
     else
