@@ -24,7 +24,7 @@ get_zsh() {
 
     echo "${YELLOW}Changing default shell...\n"
 
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+    if [[ ! $(echo $SHELL) == $(grep /zsh$ /etc/shells | tail -1) ]]; then
         chsh -s $(grep /zsh$ /etc/shells | tail -1)
         echo "${GREEN}Default shell changed.\n"
     else

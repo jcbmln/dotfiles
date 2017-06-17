@@ -8,8 +8,6 @@ The install script will check for existing dotfiles with the same name is the do
 
 The script will also attempt to set up an Ubuntu-based development environment with `zsh` as my shell of choice. It will check to see if `zsh` is installed and install it if not. If `zsh` is installed and not already the default shell, the script will set it as the default, which will take effect on the next login or when a new instance of `zsh` is launched.
 
-I mainly work in Windows 10 using [WSL](https://msdn.microsoft.com/commandline/wsl/about) as my development environment. I use [Visual Studio Code](https://code.visualstudio.com/) as my editor and [Cmder](http://cmder.net/) mini as my console emulator.
-
 ## Installation
 
 You can install my dotfiles using curl:
