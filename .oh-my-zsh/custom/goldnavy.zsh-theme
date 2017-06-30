@@ -24,5 +24,5 @@ local exit_code="%(?,,%F{red}%?%f)"
 # user@host ~/.oh-my-zsh on git:master x 0
 # >
 PROMPT="
-%F{yellow}%n%f@%F{blue}%m %F{green}%~%f${git_info} $exit_code
-%F{red}> %f"
+%F{yellow}%n%f@%F{blue}%m %F{magenta}%~%f${git_info} $exit_code
+%F{cyan}> %f"
