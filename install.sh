@@ -41,5 +41,3 @@ cleanup() {
 clone_dotfiles
 move_files
 cleanup
-
-source $HOME/.zshrc
