@@ -13,13 +13,13 @@ NORMAL="$(tput sgr0)"
 DOTFILES="${HOME}/.dotfiles"
 
 clone_dotfiles() {
-    echo "${YELLOW}Cloning dotfiles into ${DOTFILES}...\n"
+    echo "${YELLOW}Cloning dotfiles into ${DOTFILES}...\n${NORMAL}"
 
     git clone --depth=1 https://jcbmln@gitlab.com/jcbmln/dotfiles.git $DOTFILES
 }
 
 move_files() {
-    echo "${YELLOW}Moving files...\n"
+    echo "${YELLOW}Moving files...\n${NORMAL}"
 
     rsync -av ${DOTFILES}/.oh-my-zsh $HOME/
 
@@ -27,11 +27,11 @@ move_files() {
     mv ${DOTFILES}/.nano $HOME/
     mv ${DOTFILES}/bin $HOME/
 
-    echo "${GREEN}Done!"
+    echo "${GREEN}Done!${NORMAL}"
 }
 
 cleanup() {
-    echo "${YELLOW}Cleaning up...\n"
+    echo "${YELLOW}Cleaning up...\n${NORMAL}"
 
     rm -rf ${DOTFILES}
 
