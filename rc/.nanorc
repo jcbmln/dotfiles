@@ -12,4 +12,4 @@ set functioncolor green
 
 bind ^S savefile main
 
-include "~/.nano/.nanorc"
+include "~/.nano/*.nanorc"
