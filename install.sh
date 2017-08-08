@@ -21,9 +21,7 @@ clone_dotfiles() {
 move_files() {
     echo "${YELLOW}Moving files...\n${NORMAL}"
 
-    rsync -av ${DOTFILES}/.oh-my-zsh $HOME/
-
-    mv ${DOTFILES}/rc/.*rc $HOME/
+    mv ${DOTFILES}/.*rc $HOME/
     mv ${DOTFILES}/.nano $HOME/
     mv ${DOTFILES}/bin $HOME/
 
