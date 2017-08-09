@@ -23,6 +23,7 @@ move_files() {
 
     mv ${DOTFILES}/.*rc $HOME/
     mv ${DOTFILES}/.nano $HOME/
+    mv ${DOTFILES}/.zsh $HOME/
     mv ${DOTFILES}/bin $HOME/
 
     echo "${GREEN}Done!${NORMAL}"
