@@ -22,9 +22,10 @@ move_files() {
     echo "${YELLOW}Moving files...\n${NORMAL}"
 
     mv ${DOTFILES}/.*rc $HOME/
-    mv ${DOTFILES}/.nano $HOME/
-    mv ${DOTFILES}/.zsh $HOME/
-    mv ${DOTFILES}/bin $HOME/
+    
+    rsync -av ${DOTFILES}/.nano $HOME/
+    rsync -av ${DOTFILES}/.zsh $HOME/
+    rsync -av ${DOTFILES}/bin $HOME/
 
     echo "${GREEN}Done!${NORMAL}"
 }

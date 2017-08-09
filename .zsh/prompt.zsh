@@ -16,4 +16,3 @@ local exit_code="%(?,,%F{red}%?%f)"
 PROMPT='
 %F{cyan}%n%f@%F{blue}%m %F{magenta}%~%f $(prompt_git) $exit_code
 %F{green}> %f'
-
