@@ -34,7 +34,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias grep='grep --color auto'
+alias grep='grep --color=auto'
 alias history='fc -il 1'
 
 # IP addresses
