@@ -1,6 +1,8 @@
+set autoindent
 set casesensitive
-set const
+set linenumbers
 set morespace
+set mouse
 set smarthome
 set tabsize 4
 set tabstospaces
@@ -9,6 +11,7 @@ set titlecolor brightwhite,blue
 set statuscolor brightwhite,blue
 set keycolor blue
 set functioncolor green
+set numbercolor blue
 
 bind ^S savefile main
 
