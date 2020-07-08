@@ -7,13 +7,13 @@ My dotfiles for `zsh`.
 You can install my dotfiles using curl:
 
 ```sh
-sh -c "`curl -fsSL https://gitlab.com/jcbmln/dotfiles/raw/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/jcbmln/dotfiles/master/install.sh`"
 ```
 
 or, using wget:
 
 ```sh
-sh -c "`wget -O - --no-check-certificate https://gitlab.com/jcbmln/dotfiles/raw/master/install.sh`"
+sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/jcbmln/dotfiles/master/install.sh`"
 ```
 
 ## License
